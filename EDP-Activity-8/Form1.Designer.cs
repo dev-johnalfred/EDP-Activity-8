@@ -9,8 +9,10 @@
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.TextBox txtPublisherID;
+        private System.Windows.Forms.TextBox txtPublisherName;
         private System.Windows.Forms.TextBox txtPublicationYear;
         private System.Windows.Forms.TextBox txtCategoryID;
+        private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblISBN;
         private System.Windows.Forms.Label lblPublisherID;
@@ -34,8 +36,10 @@
             txtTitle = new TextBox();
             txtISBN = new TextBox();
             txtPublisherID = new TextBox();
+            txtPublisherName = new TextBox();
             txtPublicationYear = new TextBox();
             txtCategoryID = new TextBox();
+            txtCategoryName = new TextBox();
             lblTitle = new Label();
             lblISBN = new Label();
             lblPublisherID = new Label();
@@ -89,10 +93,17 @@
             // 
             // txtPublisherID
             // 
-            txtPublisherID.Location = new Point(140, 663);
+            txtPublisherID.Location = new Point(140, 475);
             txtPublisherID.Name = "txtPublisherID";
             txtPublisherID.Size = new Size(511, 27);
             txtPublisherID.TabIndex = 5;
+            // 
+            // txtPublisherName
+            // 
+            txtPublisherName.Location = new Point(140, 663);
+            txtPublisherName.Name = "txtPublisherName";
+            txtPublisherName.Size = new Size(511, 27);
+            txtPublisherName.TabIndex = 5;
             // 
             // txtPublicationYear
             // 
@@ -103,10 +114,17 @@
             // 
             // txtCategoryID
             // 
-            txtCategoryID.Location = new Point(140, 466);
+            txtCategoryID.Location = new Point(140, 650);
             txtCategoryID.Name = "txtCategoryID";
             txtCategoryID.Size = new Size(511, 27);
             txtCategoryID.TabIndex = 7;
+            // 
+            // txtCategoryName
+            // 
+            txtCategoryName.Location = new Point(140, 466);
+            txtCategoryName.Name = "txtCategoryName";
+            txtCategoryName.Size = new Size(511, 27);
+            txtCategoryName.TabIndex = 7;
             // 
             // lblTitle
             // 
@@ -129,7 +147,7 @@
             // lblPublisherID
             // 
             lblPublisherID.AutoSize = true;
-            lblPublisherID.Location = new Point(140, 629);
+            lblPublisherID.Location = new Point(140, 441);
             lblPublisherID.Name = "lblPublisherID";
             lblPublisherID.Size = new Size(91, 20);
             lblPublisherID.TabIndex = 10;
@@ -147,7 +165,7 @@
             // lblCategoryID
             // 
             lblCategoryID.AutoSize = true;
-            lblCategoryID.Location = new Point(140, 439);
+            lblCategoryID.Location = new Point(140, 623);
             lblCategoryID.Name = "lblCategoryID";
             lblCategoryID.Size = new Size(91, 20);
             lblCategoryID.TabIndex = 12;

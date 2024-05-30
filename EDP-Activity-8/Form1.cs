@@ -34,6 +34,10 @@ namespace EDP_Activity_8
                 var response = await client.GetStringAsync($"{apiUrl}/books");
                 var books = JsonConvert.DeserializeObject<Book[]>(response);
                 dgvBooks.DataSource = books;
+
+                // Hide the columns for PublisherID and CategoryID
+                dgvBooks.Columns["PublisherID"].Visible = false;
+                dgvBooks.Columns["CategoryID"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -49,7 +53,8 @@ namespace EDP_Activity_8
                 ISBN = txtISBN.Text,
                 PublisherID = int.Parse(txtPublisherID.Text),
                 PublicationYear = int.Parse(txtPublicationYear.Text),
-                CategoryID = int.Parse(txtCategoryID.Text)
+                CategoryID = int.Parse(txtCategoryID.Text),
+
             };
 
             var json = JsonConvert.SerializeObject(book);
@@ -67,6 +72,7 @@ namespace EDP_Activity_8
                 MessageBox.Show($"Error adding book: {ex.Message}");
             }
         }
+
     }
 
     public class Book
@@ -75,7 +81,10 @@ namespace EDP_Activity_8
         public string Title { get; set; }
         public string ISBN { get; set; }
         public int PublisherID { get; set; }
+        public string? PublisherName { get; set; }
         public int PublicationYear { get; set; }
         public int CategoryID { get; set; }
+        public string? CategoryName { get; set; }
     }
+
 }
